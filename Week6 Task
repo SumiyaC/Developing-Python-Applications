@@ -1,0 +1,317 @@
+1.
+Code:
+n1=int(input("Enter the 1st number:"))
+n2=int(input("Enter the 2nd number:"))
+def avg(m,n):
+    sum=m+n
+    return sum/2
+print("Average of the given numbers:", avg(n1,n2))
+Output:
+Enter the 1st number:103
+Enter the 2nd number:7
+Average of the given numbers: 55.0
+
+2.
+Code:
+n1=float(input("Enter the 1st number:"))
+n2=float(input("Enter the 2nd number:"))
+n3=float(input("Enter the 3rd number:"))
+n4=float(input("Enter the 4th number:"))
+def avg(k,l,m,n):
+    sum=k+l+m+n
+    return sum/4
+print("Average of the given 4 numbers:", avg(n1,n2,n3,n4))
+Output:
+Enter the 1st number:34.4
+Enter the 2nd number:56.0
+Enter the 3rd number:23.3
+Enter the 4th number:2.2
+Average of the given 4 numbers: 28.975
+
+3.
+Code:
+def sumarray(x):
+    sum=0
+    for i in array:
+        sum+=i
+    return sum
+array=[2,3,4,5,6,7,8,9]
+print("Summation of the array numbers:",sumarray(array))
+Output:
+Summation of the array numbers: 44
+
+4.
+Code:
+def fact(x):
+     if x==1 or x==0:
+         return 1
+     else:
+         return x*fact(x-1)
+ 
+n=int(input("Enter a number:"))
+ print("Factorial of the given number is:",fact(n))
+ 
+Output:
+Enter a number:5
+Factorial of the given number is: 120
+
+
+5.
+Code:
+a=int(input("Enter the 1st number:"))
+b=int(input("Enter the 2nd number:"))
+c=int(input("Enter the 3rd number:"))
+
+def biggest(a,b,c):
+    if a>b and a>c:
+        return a
+
+    elif b>a and b>c:
+        return b
+    else:
+        return c
+
+print("Biggest number is",biggest(a,b,c))
+Output:
+Enter the 1st number:3
+Enter the 2nd number:4
+Enter the 3rd number:56
+Biggest number is 56
+
+
+6.
+Code:
+weight=float(input("Enter your weight in kg:"))
+height=float(input("Enter your height in m:"))
+
+def bmi(w,h):
+    Bmi=weight/(height*height)
+    BMI=round(Bmi,1)
+    return BMI
+print("Your BMI is:",bmi(weight,height))
+Output:
+Enter your weight in kg:50
+Enter your height in m:0.9
+Your BMI is: 61.7
+
+7.
+Code:
+a=int(input("Enter the 1st number:"))
+b=int(input("Enter the 2nd number:"))
+c=int(input("Enter the 3rd number:"))
+d=int(input("Enter the 4th number:"))
+e=int(input("Enter the 5th number:"))
+
+def biggest(a,b,c,d,e):
+    if a>b and a>c and a>d and a>e:
+        return a
+
+    elif b>a and b>c and b>d and b>e:
+        return b
+
+    elif c>a and c>b and c>d and c>e:
+        return c
+
+    elif d>a and d>b and d>c and d>e:
+        return d
+    else:
+        return e
+
+print("Biggest number is",biggest(a,b,c,d,e))
+
+Output:
+
+Enter the 1st number:34
+Enter the 2nd number:56
+Enter the 3rd number:77
+Enter the 4th number:8
+Enter the 5th number:999
+Biggest number is 999
+
+
+8.
+Code:
+n=int(input("Enter the total number of objects in the set:"))
+r=int(input("Enter the number of choosing objects from the set:"))
+
+def fact(x):
+    if x == 1 or x == 0:
+        return 1
+    else:
+        return x * fact(x - 1)
+
+p=n-r
+factorialOf_n=fact(n)
+factorialOf_r=fact(r)
+factorialOf_p=fact(p)
+
+def combination():
+    j=factorialOf_r*factorialOf_p
+    k=factorialOf_n//j
+    return k
+
+print("Combination of the given inputs:",combination())
+
+Output:
+Enter the total number of objects in the set:5
+Enter the number of choosing objects from the set:3
+Combination of the given inputs: 10
+
+9.
+Code:
+import math
+def stD(x):
+    sum=0
+    sum2=0
+    for i in range(len(array)):
+        sum = sum + array[i]
+    mean = sum / 10
+
+    for i in range(len(array)):
+        y = (array[i] - mean) ** 2
+        sum2 = sum2 + y
+    total = sum2 / 10
+
+    std = math.sqrt(total)
+
+    return std
+array=[34,6,8,99,1,32,5,67,88,98]
+print("Standard deviation of the numbers is:",stD(array))
+
+Output:
+Standard deviation of the numbers is: 38.41822484186379
+
+10.
+Code:
+
+def search(x):
+    for i in range(len(array)):
+        if array[i]==find:
+            return True
+
+
+find=int(input("Enter the number you want to search in the array:"))
+array=[34,6,8,99,1,32,5,67,88,98]
+
+if search(array)==None:
+    print("The given number is not found in the array")
+else:
+    print("The given number is found in the array")
+
+Output:
+Enter the number you want to search in the array:678
+The given number is not found in the array
+
+11.
+
+Code:
+n=int(input("Enter a number that you want to find square root of:"))
+def squareRoot(x):
+    p=0.5
+    a=n**p
+    return a
+print("Square root of the given number is",squareRoot(n))
+Output:
+Enter a number that you want to find square root of:2
+Square root of the given number is 1.4142135623730951
+
+12.
+Code:
+sum=0
+def fact(x):
+    if x == 1 or x == 0:
+        return 1
+    else:
+        return x * fact(x - 1)
+
+def neper():
+    e=0
+    for i in range(len(array)):    #calculating the summation of each 1/array element factorial
+        f=fact(array[i])
+        j=1/f
+        e+=j
+        return e
+
+array=[33,4,58,6,76,88]
+print("Approximation of Neper's value for the array elements is:",neper())
+
+
+Output:
+Approximation of Neper's value for the array elements is: 1.151633562077195e-37
+
+
+13.
+Code:
+n=int(input("Enter the number of terms until which you want to calculate:"))
+x=int(input("Enter the value of angle in degree:"))
+
+
+x=x*(3.1416/180)
+
+def fact(x):
+    if x == 1 or x == 0:
+        return 1
+    else:
+        return x * fact(x - 1)
+
+sum = 0
+for i in range(n):
+    if i%2==0:
+        sum+=x**(2*i)/fact(i*2)
+    else:
+        sum -= x ** (2*i )/ fact(i*2)
+
+print("Value of the cosx series:",sum)
+
+sum2 = 0
+for i in range(n):
+    if i%2==0:
+        sum2+=x**(i+(i+1))/fact(i+(i+1))
+    else:
+        sum2 -= x ** (i+(i+1))/ fact(i+(i+1))
+
+print("Value of the sinx series:",sum2)
+
+Output:
+Enter the number of terms until which you want to calculate:4
+Enter the value of angle in degree:45
+Value of the cosx series: 0.7071019160809302
+Value of the sinx series: 0.7071077682415541
+
+
+B1:
+
+Code:
+def selectionSort(x):
+    for i in range(len(array)-1):
+        small=array[i]
+        for j in range(i,len(array)):
+            if array[j]<small:
+                small=array[j]
+                temp=array[i]
+                array[i]=array[j]
+                array[j]=temp
+    return array
+
+
+array=[2,32,4,66,7,0,45,1,789]
+print("here is the sorted array:",selectionSort(array))
+
+Output:
+here is the sorted array: [0, 1, 2, 4, 7, 32, 45, 66, 789]
+
+B2:
+Code:
+array1=[2,3,4,5]
+array2=[6,7,8,9]
+def multiplication():
+    arr=[]
+    for i in range(len(array1)):
+        m=array1[i]*array2[i]
+        arr.append(m)
+    return arr
+
+print("New array created by the multiplication of the two arrays is as follows:",multiplication())
+
+Output:
+New array created by the multiplication of the two arrays is as follows: [12, 21, 32, 45]
