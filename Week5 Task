@@ -1,0 +1,190 @@
+1.
+Code:
+array=[]
+sum=0
+import random
+print("30 random elements of the array are as follows:")
+for i in range(30):
+    a=random.randint(0,1000)
+    array.append(a)
+    sum=sum+a
+    print(a,end="  ")
+
+print()
+print("summation of the array is:",sum)
+print("average of the array is:", sum//30)
+
+Output:
+30 random elements of the array are as follows:
+136  771  448  300  950  142  477  714  788  401  979  173  239  4  364  135  568  910  399  488  311  976  789  544  917  925  616  357  816  344  
+summation of the array is: 15981
+average of the array is: 532
+
+2. 
+Code:
+array=[3,4,55,66,77,1,9,22]
+big=array[0]
+for i in range (len(array)-1):
+    if (array[i]> array[i+1]):
+        big=array[i]
+    else:
+        if array[i]>big:
+            big=array[i]
+        else:
+            big=big
+
+print("Biggest number of the array is:", big)
+Output:
+Biggest number of the array is: 77
+
+3.
+Code:
+array=[1,45,6,7,23,456,8,0]
+a=int(input("enter the number you want to search:"))
+if a in array:
+    print("yes! your entered value is found in the array")
+else:
+    print("Not found!")
+Output:
+enter the number you want to search:0
+yes! your entered value is found in the array
+
+4.
+Code:
+array1=[1,4,5,6,78,23,45]
+array2=[77,88,11,23,8,89,4]
+sumArray=[]
+for i in range (len(array1)):
+    sum=array1[i]+array2[i]
+    sumArray.append(sum)
+print("Here is the sum array:",sumArray)
+
+Output:
+Here is the sum array: [78, 92, 16, 29, 86, 112, 49]
+
+
+5.
+Code:
+from random import shuffle
+lottery=list(range(1,51))
+array=[]
+for i in range(5):
+    shuffle(lottery)
+    drawnFromLottery=lottery.pop()
+    array.append(drawnFromLottery)
+print("The 5 randomly chosen number from the lottery is:",array)
+
+Output:
+The 5 randomly chosen number from the lottery is: [15, 33, 30, 4, 14]
+
+6.
+Code:
+days=["Saturday","Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
+Ndays=["newday1","newday2"]
+days.append("specialDay")
+print("using append:",days)
+
+days.extend(Ndays)
+print("using extend:",days)
+
+print("using index:",days.index("Monday"))
+
+days.insert(8,"specialDay2")
+print("using insert:",days)
+
+days.count("Saturday")
+print("using count:",days)
+
+days.sort()
+print("using sort:",days)
+
+days.reverse()
+print("using reverse:",days)
+
+days.copy()
+print("using copy:",days)
+
+days.remove("newday2")
+print("using remove:",days)
+
+days.pop(9)
+print("using pop:",days)
+
+days.clear()
+print("using clear:",days)
+
+Output:
+using append: ['Saturday', 'Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'specialDay']
+using extend: ['Saturday', 'Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'specialDay', 'newday1', 'newday2']
+using index: 2
+using insert: ['Saturday', 'Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'specialDay', 'specialDay2', 'newday1', 'newday2']
+using count: ['Saturday', 'Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'specialDay', 'specialDay2', 'newday1', 'newday2']
+using sort: ['Friday', 'Monday', 'Saturday', 'Sunday', 'Thursday', 'Tuesday', 'Wednesday', 'newday1', 'newday2', 'specialDay', 'specialDay2']
+using reverse: ['specialDay2', 'specialDay', 'newday2', 'newday1', 'Wednesday', 'Tuesday', 'Thursday', 'Sunday', 'Saturday', 'Monday', 'Friday']
+using copy: ['specialDay2', 'specialDay', 'newday2', 'newday1', 'Wednesday', 'Tuesday', 'Thursday', 'Sunday', 'Saturday', 'Monday', 'Friday']
+using remove: ['specialDay2', 'specialDay', 'newday1', 'Wednesday', 'Tuesday', 'Thursday', 'Sunday', 'Saturday', 'Monday', 'Friday']
+using pop: ['specialDay2', 'specialDay', 'newday1', 'Wednesday', 'Tuesday', 'Thursday', 'Sunday', 'Saturday', 'Monday']
+using clear: []
+
+
+7.
+Code:
+fintoeng1=["auto","car"]
+fintoeng2=["sykli","cycle"]
+fintoeng3=["vauva","baby"]
+fintoeng4=["äiti","mother"]
+fintoeng5=["isä","father"]
+wordpair=[]
+wordpair.append(fintoeng1)
+wordpair.append(fintoeng2)
+wordpair.append(fintoeng3)
+wordpair.append(fintoeng4)
+wordpair.append(fintoeng5)
+
+print("Here is Finnish to English short dictionary:")
+print(wordpair[0][0],wordpair[0][1])
+print(wordpair[1][0],wordpair[1][1])
+print(wordpair[2][0],wordpair[2][1])
+print(wordpair[3][0],wordpair[3][1])
+print(wordpair[4][0],wordpair[4][1])
+
+Output:
+Here is Finnish to English short dictionary:
+auto car
+sykli cycle
+vauva baby
+äiti mother
+isä father
+
+
+Bonus Task 1:
+Code:
+
+import random
+import math
+array=[]
+sum=0
+sum2=0
+for i in range(20):
+    x=random.randint(1,50)
+    array.append(x)
+
+print("These 20 numbers are taken randomly to determine their standard deviation:",array)
+
+for i in range (len(array)):
+    sum=sum+array[i]
+mean=sum/20
+
+for i in range (len(array)):
+    y= (array[i]-mean)**2
+    sum2=sum2+y
+total=sum2/20
+
+std=math.sqrt(total)
+
+print("Standard deviation of the 20 values is:",std)
+
+Output:
+
+These 20 numbers are taken randomly to determine their standard deviation: [32, 33, 30, 50, 18, 27, 16, 11, 19, 6, 20, 5, 9, 17, 15, 30, 19, 16, 12, 46]
+Standard deviation of the 20 values is: 11.935137200719565
