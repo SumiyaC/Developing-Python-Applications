@@ -1,0 +1,87 @@
+2.
+Code:
+voltage=int(input("Enter the voltage value:"))
+current=int(input("Enter the current value:"))
+resistance=voltage/current
+print("Resistance:",resistance)
+
+Output:
+Enter the voltage value:23
+Enter the current value:3
+Resistance: 7.666666666666667
+
+3.
+Code:
+distance=int(input("Enter the distance value in km:"))
+speed=int(input("Enter the speed value in km/h:"))
+time=distance/speed
+print("Time in hours:",time)
+time2=distance//speed
+time3=time % time2
+time3=round(time3*60)
+print("Time in whole hours and minutes:",time2, "hours and", time3, "minutes")
+
+Output:
+Enter the distance value in km:1234
+Enter the speed value in km/h:45
+Time in hours: 27.42222222222222
+Time in whole hours and minutes: 27 hours and 25 minutes
+
+4.
+Code:
+weight=float(input("Enter your weight in kg:"))
+height=float(input("Enter your height in m:"))
+BMI=weight/(height*height)
+print("Your BMI is:",BMI)
+
+Output:
+Enter your weight in kg:50
+Enter your height in m:1.57
+Your BMI is: 20.28479857195018
+
+5.
+Code:
+amount=int(input("Enter the amount of dollar you want to convert to euro:"))
+Eamount=(amount*0.95)
+print("Your given dollar amount is equal to",Eamount,"Euro")
+
+Output:
+Enter the amount of dollar you want to convert to euro:40
+Your given dollar amount is equal to 38.0 Euro
+
+6.
+Code:
+sec=int(input("Enter time in seconds:"))
+hour=sec//(3600)
+rem1=sec%3600
+min=rem1//60
+secs=sec - ((hour*3600)+(min*60))
+print("The given seconds are", hour, "hour", min,"minute and", secs,"seconds")
+
+Output:
+Enter time in seconds:23419
+The given seconds are 6 hour 30 minute and 19 seconds
+
+7.
+Code:
+amount=int(input("Enter the euro amount:"))
+c1=amount//500         #c=counter,r=remainder
+r1=amount%500
+c2=r1//200
+r2=r1%200
+c3=r2//100
+r3=r2%100
+c4=r3//50
+r4=r3%50
+c5=r4//20
+r5=r4%20
+c6=r5//10
+r6=r5%10
+c7=r6//5
+r7=r6%5
+print("Your given euro is equals to ",c1,"bills of 500 euro",c2,"bills of 200 euro",c3,"bills of 100 euro",c4,"bills of 50 euro",c5,"bills of 20 euro",c6,"bills of 10 euro and",c7,"bills of 5 euro")
+
+Output:
+Enter the euro amount:1233456
+Your given euro is equals to  2466 bills of 500 euro 2 bills of 200 euro 0 bills of 100 euro 1 bills of 50 euro 0 bills of 20 euro 0 bills of 10 euro and 1 bills of 5 euro
+
