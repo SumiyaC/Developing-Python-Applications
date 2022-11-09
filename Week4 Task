@@ -1,0 +1,149 @@
+1.
+Code:
+sum=0
+i=1
+while i!=6:
+    sum=sum+i
+    i=i+1
+print("sum of values 1 - 5 is:",sum)
+
+Output:
+sum of values 1 - 5 is: 15
+
+2.
+Code:
+sum=0
+for i in range(2,42,2):
+    sum=sum+i
+print("Summation of the even numbers is:",sum)
+
+Output:
+Summation of the even numbers is: 420
+
+3.
+Code:
+sum=0
+for i in range(5,105,5):
+    sum=sum+i
+print("Summation of the numbers is:",sum)
+
+Output:
+Summation of the numbers is: 1050
+
+
+
+
+4.
+Code:
+import random
+c1 = 0
+c2 = 0
+c3 = 0
+c4 = 0
+c5 = 0
+c6 = 0
+for i in range(100):
+    a = random.randint(1,6)
+    if a == 1:
+        c1 += 1
+    if a == 2:
+        c2 += 1
+    if a == 3:
+        c3 += 1
+    if a == 4:
+        c4 += 1
+    if a == 5:
+        c5 += 1
+    if a == 6:
+        c6 += 1
+
+print("Total amount of the appearance of value 1 is",c1,"times")
+print("Total amount of the appearance of value 2 is",c2,"times")
+print("Total amount of the appearance of value 3 is",c3,"times")
+print("Total amount of the appearance of value 4 is",c4,"times")
+print("Total amount of the appearance of value 5 is",c5,"times")
+print("Total amount of the appearance of value 6 is",c6,"times")
+
+Output:
+Total amount of the appearance of value 1 is 23 times
+Total amount of the appearance of value 2 is 13 times
+Total amount of the appearance of value 3 is 13 times
+Total amount of the appearance of value 4 is 16 times
+Total amount of the appearance of value 5 is 17 times
+Total amount of the appearance of value 6 is 18 times
+
+
+
+
+
+5.
+Code:
+balance=0
+a=int(input("Enter your deposit value:"))
+b=int(input("Enter your withdrawal value:"))
+balance=(balance+a) - b
+print("Your current balance is:",balance)
+
+Output:
+Enter your deposit value:5678
+Enter your withdrawal value:1234
+Your current balance is: 4444
+
+
+7.
+Code:
+n=int(input("Enter the amount of rows:"))
+for i in range(n):
+    for j in range(i+1):
+        print("m", end="")
+    print()
+
+Output:
+Enter the amount of rows:5
+m
+mm
+mmm
+mmmm
+mmmmm
+
+
+
+
+
+8.
+Code:
+def fact(x):
+    if x==1 or x==0:
+        return 1
+    else:
+        return x*fact(x-1)
+
+n=int(input("Enter a number:"))
+print("Factorial of the given number is:",fact(n))
+
+Output:
+Enter a number:5
+Factorial of the given number is: 120
+
+9.
+Code:
+b=int(input("Enter the base value:"))
+e=int(input("Enter the exponent value:"))
+
+result=1
+if e==0:
+    print("The result is 1")
+elif e>0:
+    for x in range(e):
+        result*=b
+    print("The result is ",result)
+elif e<0:
+    for x in range(-1*e):
+        result*=b
+    result=1/result
+    print("The result is ", result)
+
+Output:
+Enter the base value:5
+Enter the exponent value:-2
+The result is  0.04
