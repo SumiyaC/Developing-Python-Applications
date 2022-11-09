@@ -1,0 +1,231 @@
+#1
+Code:
+
+from tkinter import *
+
+root = Tk()
+
+import random
+
+j = (random.randint(1, 101))
+k = (random.randint(1, 101))
+
+
+def addition():
+    label1 = Label(root,
+                   text="Question: Enter the summation of these two numbers [{} & {}] on the given text box.".format(j,k))
+    label1.pack()
+
+
+button1 = Button(root, text="Click to see the question", command=addition)
+button1.pack()
+
+a = Entry(root, width=50)
+a.pack()
+
+
+def check():
+    num = a.get()
+    result = (j + k)
+    if num == result:
+        label2 = Label(root, text="Your answer is correct!", bg="green")
+        label2.pack()
+
+    else:
+        label3 = Label(root, text="Your answer is  incorrect!", bg="red")
+        label3.pack()
+
+
+button2 = Button(root, text="Submit", command=check)
+button2.pack()
+
+root.mainloop()
+
+
+Output:
+
+
+ 
+
+
+
+#2
+Code:
+
+from tkinter import *
+
+root=Tk()
+root.title("Creating Calculator")
+a=Entry(root,width=40,bg="skyblue")
+a.grid(row=0,column=0,columnspan=3)
+
+def new_button(n):
+    now=a.get()
+    a.delete(0, END)
+    a.insert(0,str(now)+ str(n))
+
+def clear():
+    a.delete(0, END)
+
+def add():
+    b=a.get()
+    global num
+    global check
+    check="addition"
+    num = int(b)
+    a.delete(0,END)
+
+def sub():
+    b = a.get()
+    global num
+    global check
+    check = "subtraction"
+    num = int(b)
+    a.delete(0, END)
+
+def multi():
+    b = a.get()
+    global num
+    global check
+    check = "multiplication"
+    num = int(b)
+    a.delete(0, END)
+
+def divide():
+    b = a.get()
+    global num
+    global check
+    check = "division"
+    num = int(b)
+    a.delete(0, END)
+
+
+def equal():
+    c=a.get()
+    a.delete(0,END)
+    if check=="addition":
+        a.insert(0,num +int(c))
+
+    if check=="subtraction":
+        a.insert(0,num - int(c))
+
+    if check=="multiplication":
+        a.insert(0,num * int(c))
+
+    if check=="division":
+        a.insert(0,num / int(c))
+
+
+
+button1=Button(root,text="1",padx=30,pady=15,bg="skyblue",command=lambda:new_button(1))
+button2=Button(root,text="2",padx=30,pady=15,bg="skyblue",command=lambda:new_button(2))
+button3=Button(root,text="3",padx=30,pady=15,bg="skyblue",command=lambda:new_button(3))
+button4=Button(root,text="4",padx=30,pady=15,bg="skyblue",command=lambda:new_button(4))
+button5=Button(root,text="5",padx=30,pady=15,bg="skyblue",command=lambda:new_button(5))
+button6=Button(root,text="6",padx=30,pady=15,bg="skyblue",command=lambda:new_button(6))
+button7=Button(root,text="7",padx=30,pady=15,bg="skyblue",command=lambda:new_button(7))
+button8=Button(root,text="8",padx=30,pady=15,bg="skyblue",command=lambda:new_button(8))
+button9=Button(root,text="9",padx=30,pady=15,bg="skyblue",command=lambda:new_button(9))
+button0=Button(root,text="0",padx=30,pady=15,bg="skyblue",command=lambda:new_button(0))
+addButton=Button(root,text="+",padx=29,pady=15,bg="skyblue",command=add)
+addClear=Button(root,text="Clear",padx=140,pady=15,bg="skyblue",command=clear)
+addEqual=Button(root,text="=",padx=30,pady=15,bg="skyblue",command=equal)
+subtractButton=Button(root,text="-",padx=32,pady=15,bg="skyblue",command=sub)
+multiplyButton=Button(root,text="*",padx=32,pady=15,bg="skyblue",command=multi)
+divideButton=Button(root,text="/",padx=32,pady=15,bg="skyblue",command=divide)
+
+button1.grid(row=3, column=0)
+button2.grid(row=3, column=1)
+button3.grid(row=3, column=2)
+button4.grid(row=2, column=0)
+button5.grid(row=2, column=1)
+button6.grid(row=2, column=2)
+button7.grid(row=1, column=0)
+button8.grid(row=1, column=1)
+button9.grid(row=1, column=2)
+button0.grid(row=4, column=0)
+addButton.grid(row=4, column=1)
+addClear.grid(row=6, column=0,columnspan=3)
+addEqual.grid(row=5, column=2)
+subtractButton.grid(row=4,column=2)
+multiplyButton.grid(row=5,column=0)
+divideButton.grid(row=5,column=1)
+
+root.mainloop()
+
+
+Output:
+88/11=8.0
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+#4
+Code:
+
+from tkinter import *
+
+root = Tk()
+
+label1 = Label(root, text="____Feedback Form____")
+label1.pack()
+
+label2 = Label(root, text="Enter your age:")
+label2.pack()
+a = Entry(root, width=50)
+a.pack()
+
+label3 = Label(root, text="Enter telephone number:")
+label3.pack()
+b = Entry(root, width=50)
+b.pack()
+
+label4 = Label(root, text="Enter your homepage url:")
+label4.pack()
+c = Entry(root, width=50)
+c.pack()
+
+label5 = Label(root, text="Enter your email:")
+label5.pack()
+d = Entry(root, width=50)
+d.pack()
+
+
+def check():
+    get1 = a.get()
+    get2 = b.get()
+    get3 = c.get()
+    get4 = d.get()
+
+    if len(get1) == 0:
+        print("Please,Enter your age!You can't leave any text box Empty!")
+
+    if len(get2) == 0:
+        print("Please,Enter your telephone number!You can't leave any text box Empty!")
+
+    if len(get3) == 0:
+        print("Please,Enter your homepage url!You can't leave any text box Empty!")
+
+    if len(get4) == 0:
+        print("Please,Enter your email!You can't leave any text box Empty!")
+
+    elif len(get1) and len(get2) and len(get3) and len(get4) != 0:
+        print("Feedback form Submitted")
+
+
+button1 = Button(root, text="Submit", command=check)
+button1.pack()
+
+root.mainloop()
+
+
+Output:
+
+ 
+ 
