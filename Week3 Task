@@ -1,0 +1,167 @@
+1.                                                                                     
+Code:
+x=int(input("Enter a value:"))
+if x>100:
+    print("Yes, the given value is greater than 100")
+else:
+    print("The given value is smaller than 100")
+
+Output:
+Enter a value:2
+The given value is smaller than 100
+
+2.
+Code:
+x=int(input("Enter a weekday number:"))
+if x==1:
+    print("Today is Monday")
+elif x==2:
+    print("Today is Tuesday")
+elif x==3:
+    print("Today is Wednesday")
+elif x==4:
+    print("Today is Thursday")
+elif x==5:
+    print("Today is  Friday")
+elif x==6:
+    print("Today is Saturday")
+elif x==7:
+    print("Today is Sunday")
+
+Output:
+Enter a weekday number:5
+Today is  Friday
+
+
+3.
+Code:
+
+weight=float(input("Enter your weight in kg:"))
+height=float(input("Enter your height in m:"))
+Bmi=weight/(height*height)
+BMI=round(Bmi,1)
+print("Your BMI is:",BMI)
+if BMI<18.5:
+    print("You are underweight!!")
+elif BMI>=18.5 and BMI<=24.9:
+    print("Good! you are in healthy Weight range")
+elif BMI>=25.0 and BMI<=29.9:
+    print("You are overweight!!")
+elif BMI>30.0:
+    print("You are obese :(")
+
+Output:
+Enter your weight in kg:50
+Enter your height in m:0.7
+Your BMI is: 102.0
+You are obese :(
+
+4.
+Code:
+x=int(input("Enter a month number:"))
+if x==1:
+    print("January has 31 days")
+elif x==2:
+    print("This year February had 28 days")
+elif x==3:
+    print("March has 31 days")
+elif x==4:
+    print("April has 30 days")
+elif x==5:
+    print("May has 31 days")
+elif x==6:
+    print("June has 30 days")
+elif x==7:
+    print("July has 31 days")
+elif x==8:
+    print("August has 31 days")
+elif x==9:
+    print("September has 30 days")
+elif x==10:
+    print("October has 31 days")
+elif x==11:
+    print("November has 30 days")
+elif x==12:
+    print("December has 31 days")
+Output:
+Enter a month number:11
+November has 30 days
+
+5.
+Code:
+a=int(input("Enter the 1st side of the triangle:"))
+b=int(input("Enter the 2nd side of the triangle:"))
+c=int(input("Enter the 3rd side of the triangle:"))
+r=(a**2)+(b**2)
+
+if r==(c**2):
+    print("This is a right angled triangle")
+elif a==b==c:
+    print("This is an equilateral triangle")
+elif a==b or a==c or b==c:
+    print("This is an isosceles triangle")
+elif a!=b and a!=c and b!=c:
+    print("This is a scalene triangle")
+
+Output:
+Enter the 1st side of the triangle:3
+Enter the 2nd side of the triangle:4
+Enter the 3rd side of the triangle:5
+This is a right angled triangle
+
+6.
+Code(1st way- used greater than):
+a=int(input("Enter the 1st number:"))
+b=int(input("Enter the 2nd number:"))
+c=int(input("Enter the 3rd number:"))
+
+if a>b and a>c:
+    print("1st one is the biggest number")
+elif b>a and b>c:
+    print("2nd one is the biggest number")
+else:
+    print("3rd one is the biggest number")
+
+Output:
+Enter the 1st number:4
+Enter the 2nd number:5
+Enter the 3rd number:7
+3rd one is the biggest number
+
+Code(2nd way- used less than):
+a=int(input("Enter the 1st number:"))
+b=int(input("Enter the 2nd number:"))
+c=int(input("Enter the 3rd number:"))
+
+if a<c and b<c:
+    print("3rd one is the biggest number")
+elif b<a and c<a:
+    print("1st one is the biggest number")
+else:
+    print("2nd one is the biggest number")
+
+Output:
+Enter the 1st number:4
+Enter the 2nd number:56
+Enter the 3rd number:2
+2nd one is the biggest number
+
+Code(3rd way- used nested if):
+a=int(input("Enter the 1st number:"))
+b=int(input("Enter the 2nd number:"))
+c=int(input("Enter the 3rd number:"))
+
+if a>b:
+    if a>c:
+        print("1st one is the biggest number")
+elif b>a:
+    if b>c:
+        print("2nd one is the biggest number")
+    else:
+        print("3rd one is the biggest number")
+
+Output:
+Enter the 1st number:2
+Enter the 2nd number:3
+Enter the 3rd number:4
+3rd one is the biggest number
